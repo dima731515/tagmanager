@@ -60,6 +60,7 @@ $(document).ready(function() {
 // Детальная страница товара
     const detailProduct = new Wrapp('.interior-section', null, null);
     detailProduct.initChildWrapp('.item-card__interior', {'click':googleLayerTemplates['detailProductList']});
+    detailProduct.initChildWrapp('.interior__interior-card', {'click':googleLayerTemplates['detailProduct']});
 //    const detailProductLists = new Wrapp('owl-stage-outer', {'click':googleLayerTemplates['detailProductList']}, null);
 
     window.detailGoggleManger = new GoogleManager();
