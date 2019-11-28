@@ -115,10 +115,12 @@ GoogleManager.prototype.viewedOrderBlock = function(block = {}){
 GoogleManager.prototype.viewedOrderConfirm = function(){
     if(typeof BX.getCookie('orderId') !== "undefined" && BX.getCookie('orderId')  !== ""){
         let orderId = BX.getCookie('orderId'); 
-        if(window.location.search.indexOf('?ORDER_ID='+ orderId) === -1){
+        if(window.location.search.indexOf('?ORDER_ID='+ orderId) !== -1){
+            console.log('Order false');
             return false;
         }
     }
+    console.log('test order');
 
     let el = document.querySelector('.sale_order_full_table')
     let data = el.getAttribute('data-product-list');
